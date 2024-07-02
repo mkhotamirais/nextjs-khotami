@@ -8,7 +8,7 @@ export default async function C1PostsList() {
   return (
     <div>
       <ul className="text-center">
-        {data.posts.map((post) => (
+        {data.posts.map((post: { id: number; title: string }) => (
           <li key={post.id} className="mb-3 text-lg font-medium">
             <Link href={`/course1/posts/${post.id}`}>{post.title}</Link>
           </li>
