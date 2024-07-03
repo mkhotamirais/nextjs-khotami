@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.overflow-y-scroll::-webkit-scrollbar {
+  @apply hidden;
+}
+
+p {
+  @apply mb-3 indent-5 leading-relaxed;
+}
+
+p a {
+  @apply underline;
+}
+
+pre {
+  @apply overflow-y-scroll bg-slate-800 text-white p-1;
+}
