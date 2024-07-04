@@ -20,7 +20,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {/* <MainMenu /> */}
-        <MainLayout>{children}</MainLayout>
+        {/* <MainLayout>{children}</MainLayout> */}
+        {children}
       </body>
     </html>
   );
