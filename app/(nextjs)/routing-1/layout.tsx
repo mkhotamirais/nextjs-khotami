@@ -5,18 +5,18 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const menu = [
-  { href: "/nextjs/routing", label: "home" },
-  { href: "/nextjs/routing/r1-basic", label: "r1 basic" },
-  { href: "/nextjs/routing/_r2-private", label: "r2 private" },
-  { href: "/nextjs/routing/r3-group-1", label: "r3 group 1" },
-  { href: "/nextjs/routing/r3-group-2", label: "r3 group 2" },
-  { href: "/nextjs/routing/r4-dinamic", label: "r4 dinamic" },
-  { href: "/nextjs/routing/r4-dinamic/1", label: "r4 dinamic 1" },
-  { href: "/nextjs/routing/r4-dinamic/2", label: "r4 dinamic 2" },
+  { href: "/routing-1", label: "home" },
+  { href: "/routing-1/r1-basic", label: "r1 basic" },
+  { href: "/routing-1/_r2-private", label: "r2 private" },
+  { href: "/routing-1/r3-group-1", label: "r3 group 1" },
+  { href: "/routing-1/r3-group-2", label: "r3 group 2" },
+  { href: "/routing-1/r4-dinamic", label: "r4 dinamic" },
+  { href: "/routing-1/r4-dinamic/1", label: "r4 dinamic 1" },
+  { href: "/routing-1/r4-dinamic/2", label: "r4 dinamic 2" },
 ];
 
 export default function LayoutRouting({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   return (
     <main className="min-h-screen bg-gray-100">
       <div className="min-h-screen max-w-2xl mx-auto px-3 bg-white">
@@ -30,7 +30,7 @@ export default function LayoutRouting({ children }: { children: React.ReactNode 
                 key={i}
                 href={item.href}
                 className={`${
-                  pathname.split("/")[3] === item.href.split("/")[3]
+                  pathname.split("/")[2] === item.href.split("/")[2]
                     ? "bg-gray-200 text-gray-950"
                     : "bg-gray-50 text-gray-400"
                 } border rounded mb-1 hover:text-gray-950 px-1`}

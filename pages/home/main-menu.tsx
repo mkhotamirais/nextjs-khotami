@@ -117,6 +117,7 @@ export function BtnMenu() {
           <div className="border leading-none w-5 border-gray-400" />
           <Link href="/portofolio-saya">
             <motion.button
+              onClick={hideMm}
               className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
@@ -125,6 +126,7 @@ export function BtnMenu() {
           </Link>
           <Link href="/">
             <motion.button
+              onClick={hideMm}
               className="bg-gray-50 z-40 relative rounded-full w-10 h-10 flex items-center justify-center"
               whileHover={{ scale: 1.1 }}
             >
