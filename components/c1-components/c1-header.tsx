@@ -11,7 +11,7 @@ const navLinks = [
 ];
 
 export default function C1Header() {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
 
   return (
     <header className="flex justify-between items-center border-b h-16 px-3 md:px-12 lg:px24">
