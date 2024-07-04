@@ -3,8 +3,8 @@
 import { usePorto1 } from "@/store/usePorto1";
 import { motion } from "framer-motion";
 import { FaBars, FaXmark } from "react-icons/fa6";
-import { links } from "./lib/data";
 import Link from "next/link";
+import { links } from "@/lib/porto-1/data";
 
 export default function Header() {
   return (
